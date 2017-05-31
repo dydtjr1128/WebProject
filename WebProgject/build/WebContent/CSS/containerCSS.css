@@ -1,0 +1,53 @@
+#containr_wrap{
+	height : 1680px;
+}
+
+#ad_block{   
+   width : 100%; 
+   height : 450px;  
+   background : url('../images/sub_background.png');   
+}
+
+#slider{
+
+}
+
+#slider_item{
+   position : relative;
+   width : 980px;
+   height : 450px;   
+}
+
+.common_set {
+    position: relative;
+    left: 20%;
+    width: 980px; 
+    height :450px;
+}
+
+#slider_item>#lbtn{
+	position : absolute;
+	top : 40%;
+	left : 30px;
+}
+
+#slider_item>#rbtn
+{
+	position : absolute; 
+	top : 40%; 
+	right : 30px;
+}
+
+.sub_title{
+	font-size : 1.5em;
+	color: #ffffff;
+}
+
+#movie_selection{
+	height : 450px;
+	margin-bottom : 150px;
+}
+
+#event{
+	height : 450px;
+}
