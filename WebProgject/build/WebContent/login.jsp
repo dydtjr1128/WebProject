@@ -13,7 +13,9 @@
 	<div id="loginHeader">
 		<div>
 			<form id="loginform">
-				<label for="user_id">ID</label> 
+			
+				<label for="user_id">ID</label>
+				 
 				<input type="text" id="user_id"	name="input_id" placeholder="ID"> 
 				<label for="user_pw">PW</label>
 				<input type="password" id="user_pw" name="input_pw" placeholder="Input Your PW...">				 
