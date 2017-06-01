@@ -16,7 +16,7 @@
 		<div>
 			<ul class="first">
 				<li><a href="login.jsp">로그인</a></li>
-				<li><a href="login.jsp">회원가입</a></li>
+				<li><a href="signin.jsp">회원가입</a></li>
 				<li><a href="login.jsp">고객센터</a></li>
 			</ul>
 			<ul class="menuList">

@@ -1,13 +1,15 @@
-a{
-	color : #DDBE74;	
-	left : 40%;	
-	text-decoration: none;		
-}
 #import_header {
 	position : static;
 	height : 200px;
 	padding : 0px;
 	margin : 0px;
+}
+a{
+	text-decoration: none;
+	color : #DDBE74;
+}
+#logo{
+	 left : 40%; 
 }
 #import_header>a{	
 	position : absolute;
@@ -67,7 +69,7 @@ a{
 }
 body
 {
-	background-Color : #000000;
+	background-Color : #FFFBEF;
 	/* background-Color : #EDFFE7; */
 	font-family : Daum;	
 	margin : 0;	

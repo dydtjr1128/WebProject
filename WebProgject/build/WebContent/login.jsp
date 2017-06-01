@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="CSS/loginCSS.css?ver=2">
+<link rel="stylesheet" type="text/css" href="CSS/loginCSS.css?ver=1">
 </head>
 <body>
 	<div id="header">
@@ -16,8 +16,8 @@
 				<label for="user_id">ID</label> 
 				<input type="text" id="user_id"	name="input_id" placeholder="ID"> 
 				<label for="user_pw">PW</label>
-				<input type="text" id="user_pw" name="input_pw" placeholder="Input Your PW..."> 
-				<label for="user_login">Login</label>
+				<input type="password" id="user_pw" name="input_pw" placeholder="Input Your PW...">				 
+				<label for="user_login">Login</label><a href="signin.jsp" id="signIn">Sign in</a>
 				<input type="submit" id="user_pw" name="input_pw" value="Login">
 			</form>
 		</div>
