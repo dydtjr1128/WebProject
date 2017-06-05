@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="shortcut icon" href="images/pabicon.ico" type="image/x-icon"/>
-<link rel="stylesheet" type="text/css" href="CSS/indexCSS.css?ver=2">
+<link rel="stylesheet" type="text/css" href="CSS/indexCSS.css?ver=1">
 <%-- <%
 String name = "ff";
 %>
@@ -17,7 +17,7 @@ alert('<%=name%>'); --%>
 <body>
    <div id="cky_wrap">
       <div id="header">
-      <%@ include file="header2.jsp" %>      
+      <%@ include file="header.jsp" %>      
       </div>      
 
        <div id="container">

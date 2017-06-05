@@ -25,20 +25,24 @@
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						<li data-target="#myCarousel" data-slide-to="1"></li>
 						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
 					</ol>
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" style="height : 450px;">
 						<div class="item active">
-							<img src="images\dog.jpg" class="img-thumbnail" alt="dog" width="980px" height="450px">							
+							<img src="images\listImage\그림1.jpg" class="img-thumbnail" alt="dog" width="980px" height="450px">							
 						</div>
 
 						<div class="item">
-							<img src="images\dog.jpg" class="img-thumbnail" alt="dog" width="980px" height="450px;">
+							<img src="images\listImage\그림3.png" class="img-thumbnail" alt="dog" width="980px" height="450px;">
 						</div>
 
 						<div class="item">
-							<img src="images\dog.jpg" class="img-thumbnail" alt="dog" width="980px" height="450px;">
+							<img src="images\listImage\그림6.png" class="img-thumbnail" alt="dog" width="980px" height="450px;">
+						</div>
+						<div class="item">
+							<img src="images\listImage\그림7.png" class="img-thumbnail" alt="dog" width="980px" height="450px;">
 						</div>
 					</div>
 
@@ -68,18 +72,20 @@
 						<img src="images\movie_selection.png" width="400px">
 					</h3>
 					<hr>
-					<iframe width="560" height="315"
+					<div>
+					<iframe width="560px" height="315px"
 						src="https://www.youtube.com/embed/Nfu-t7FaY04?autoplay=1&rel=0&controls=0&loop=1"
 						frameborder="0"></iframe>
-					<img src="images\dog.jpg" style="width: 200px; height: 300px">
+					<img src="images\poster\wonderwoman.jpg" style="width: 200px; height: 315px">
+					</div>
 				</div>
 
 				<div id="event">
 					<h3 class="sub_title">
-						<img src="images\event.png" width="200px">
+						<img src="images\movie_selection.png" width="400px">
 					</h3>
 					<hr>
-					<img src="images\dog.jpg" style="width: 100%; height: 100%">
+					<img src="images\listImage\그림5.png" style="width: 100%; height: 100%">
 				</div>
 		</div>
 	</div>
