@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="CSS/headerCSS.css?ver2">
+<link rel="stylesheet" type="text/css" href="CSS/headerCSS.css?ver1">
 </head>
 <body>
 	<div id="import_header">
@@ -31,7 +31,7 @@
 			<%
 				} else {
 			%>
-			<ul class="firstmenu" style="width: 450px; left: 65%;">
+			<ul class="firstmenu" style="width: 500px;">
 				<li><%=user_ID%>님 환영합니다.</li>
 				<li><a href="login.jsp">마이페이지</a></li>
 				<li><a href="logout.jsp">로그아웃</a></li>

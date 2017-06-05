@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="CSS/signinCSS.css?ver=1">
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-<%@ include file="check.jsp" %>
 <script>
 
 $(function(){

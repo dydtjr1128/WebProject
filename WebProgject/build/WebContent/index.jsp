@@ -17,7 +17,7 @@ alert('<%=name%>'); --%>
 <body>
    <div id="cky_wrap">
       <div id="header">
-      <%@ include file="header.jsp" %>      
+      <%@ include file="header2.jsp" %>      
       </div>      
 
        <div id="container">

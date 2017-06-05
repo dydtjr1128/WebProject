@@ -1,4 +1,4 @@
-#import_header {	
+/* #import_header {	
 	height : 200px;
 	padding : 0px;
 	margin : 0px;
@@ -9,7 +9,8 @@ a{
 }
 
 #imgDiv{
-	/* display : inline-block; */
+	position : relative;
+	display : inline-block;
 	margin : 0 auto;
 	width : 390px; 
 }
@@ -28,7 +29,7 @@ a{
 .firstmenu{
 	position : relative;	
 	display: inline-block;
-	width : 350px;
+	width : 500px;
 	margin : 0 auto;
 	left : 70%;	
 	top : 50px;
@@ -61,13 +62,17 @@ a{
 }
 .menuList>li>a{		
 	font-size : 25px;			
+} */
+a{
+	text-decoration: none;
+	color : #DDBE74;
+}
+#myul li {
+	padding : 0 30px;
 }
 body
 {
 	background-Color : #FFFFFF;
 	/* background-Color : #EDFFE7; */
-	font-family : Daum;	
-	margin : 0;	
-	margin-top : 30px;
-	
+	font-family : Daum;
 }
