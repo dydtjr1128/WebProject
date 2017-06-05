@@ -5,6 +5,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="CSS/loginCSS.css?ver=1">
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(function(){	
+	var out;
+	$("#user_login").click(function(){		
+		var data_param ="input_id="+$("#user_id").val() + "&" + "input_pw="+$("#user_pw").val();		
+		$.ajax({
+			type : "post",
+			url : "loginCheckDB.jsp",			
+			data : data_param,
+			success : function(result){		
+					var p = result.trim();					
+					if(p == 1){/* 로그인성공  */
+						location.replace("index.jsp");
+					}
+					else if(p == 2)
+						alert("로그인 실패!");										
+			}
+		});
+	});
+});
+</script>
 </head>
 <body>
 	<div id="header">
@@ -20,7 +42,7 @@
 				<label for="user_pw">PW</label>
 				<input type="password" id="user_pw" name="input_pw" placeholder="Input Your PW...">				 
 				<label for="user_login">Login</label><a href="signin.jsp" id="signIn">Sign in</a>
-				<input type="submit" id="user_pw" name="input_pw" value="Login">
+				<input type="button" id="user_login" name="login" value="Login">
 			</form>
 		</div>
 	</div>

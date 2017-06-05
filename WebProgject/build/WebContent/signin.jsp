@@ -1,16 +1,62 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
+<include file="QueryHeader.jsp">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="CSS/signinCSS.css?ver=2">
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<%@ include file="check.jsp" %>
 <script>
-document.onload = function(){
-	var password = document.getElementById("user_pw");
-	password.addEventListenr("keyup",myFuntion);
+
+$(function(){
 	
-}
+	var out;
+	$("#signIn").click(function(){
+		
+		var data_param ="input_id="+$("#user_id").val();		
+		$.ajax({
+			type : "post",
+			url : "signinCheckDB.jsp",			
+			data : data_param,
+			success : function(result){				
+					alert(result.trim());
+			}
+		});
+	});
+});
+$(function(){
+	
+	var out;
+	$("#user_submit").click(function(){
+		
+		var data_param ="input_id="+$("#user_id").val() + "&" + "input_pw="+$("#user_pw").val() + "&" + "input_email="+$("#user_email").val();		
+		$.ajax({
+			type : "post",
+			url : "signinDB.jsp",			
+			data : data_param,
+			success : function(result){		
+					var p = result.trim();
+					if(p == 1)
+						alert("중복확인 하세요!!");
+					else if(p == 2)
+						alert("비밀번호가 짧습니다.");
+					else if(p == 3){
+						alert("회원가입 성공!");
+						location.href="login.jsp";
+					}					
+			}
+		});
+	});
+});
+</script>
+<script>
+	document.onload = function() {
+		var password = document.getElementById("user_pw");
+		password.addEventListenr("keyup", myFuntion);
+
+	}
 	function myFunction() {
 		var password = document.getElementById("user_pw");
 		var progress = document.getElementById("pwprogress");
@@ -37,31 +83,39 @@ document.onload = function(){
 			break;
 		}
 	}
+	function myAlert(userinput) {
+
+	}
 </script>
 </head>
 <body>
+<div id="con"></div>
+
 	<div id="header">
 		<%@ include file="header.jsp"%>
 	</div>
 	<div id="loginHeader">
 		<div>
-			<form id="loginform">
+			<form id="loginform" action="signinDB.jsp" method="post">
 				<table>
 					<tbody>
 						<tr>
 							<td colspan="2"><label for="user_id">ID</label></td>
 						</tr>
 						<tr>
+							
 							<td><input type="text" id="user_id" name="input_id"
-								placeholder="ID"></td>
-							<td><input type="button" id="singIn" value="중복 확인"></td>
+								placeholder="ID"></td><!-- ID넣는곳  -->
+							<td><input type="button" id="signIn" value="중복 확인"></td>
+							
+							
 						</tr>
 						<tr>
 							<td colspan="2"><label for="user_pw">PW</label></td>
 						</tr>
 						<tr>
-							<td><input type="text" id="user_pw" name="input_pw"
-								placeholder="Input Your PW..." onkeydown="myFunction()"></td>
+							<td><input type="password" id="user_pw" name="input_pw"
+								placeholder="Input Your PW..." onkeydown="myFunction()"></td><!-- PW넣는곳  -->
 							<td><progress min="0" max="100" value="30" id="pwprogress"></td>
 
 						</tr>
@@ -70,20 +124,31 @@ document.onload = function(){
 						</tr>
 						<tr>
 							<td colspan="2"><input type="email" id="user_email"
-								name="input_email" placeholder="Input Your E-Mail..."></td>
+								name="input_email" placeholder="Input Your E-Mail..."></td><!-- email넣는곳  -->
 						</tr>
 						<tr>
-							<td colspan="2"><label for="user_login">Login</label></td>
+							<td colspan="2"><label for="user_login">SignIn</label></td>
 						</tr>
 						<tr>
-							<td colspan="2"><input type="submit" id="user_pw"
-								name="input_pw" value="Login"></td>
+							<td><input type="button" id="user_submit"
+								name="input_submit" value="Sign In"></td>
 						</tr>
 					</tbody>
 				</table>
 			</form>
 		</div>
 	</div>
-
+	
+<%-- 	<script>
+		document.findViewById("user_id").value =
+	<%=request.getParameter("input_id")%>
+		;
+		document.findViewById("user_pw").value =
+	<%=request.getParameter("input_pw")%>
+		;
+		document.findViewById("user_email").value =
+	<%=request.getParameter("input_email")%>
+		;
+	</script> --%>
 </body>
 </html>

@@ -1,5 +1,4 @@
-#import_header {
-	position : static;
+#import_header {	
 	height : 200px;
 	padding : 0px;
 	margin : 0px;
@@ -9,32 +8,28 @@ a{
 	color : #DDBE74;
 }
 #logo{
-	 left : 40%; 
+	display : block;
+	margin : 0 auto;
+	width : 390px; 
 }
-#import_header>a{	
-	position : absolute;
-	left : 600px;		
-}
+
 #import_header h1{
 	 text-align: center;
 	 top : 50px;
 	 margin-bottom : 0px;
 }
-#logo{
-	display: inline-block;		
-}
 #import_header hr{	
 	position : relative;
-	margin : 5px;
-	width : 100%;
+	width : 1500px;
+	margin : 0 auto;	
 	top : 150px;
 }
 .first{
-	position : absolute;
-	margin: 0;	
+	position : relative;	
 	display: inline-block;
 	width : 350px;
-	left : 1000px;		
+	margin : 0 auto;
+	left : 70%;		
 	text-align : center;	
 	list-style : none;
 }
@@ -55,7 +50,7 @@ a{
 	position : absolute;	
 	margin : 0;
 	top : 120px;	
-	left : 300px;
+	left : 25%;
 	width : 1000px;
 	list-style : none;		
 }
@@ -69,7 +64,7 @@ a{
 }
 body
 {
-	background-Color : #FFFBEF;
+	background-Color : #FFFFFF;
 	/* background-Color : #EDFFE7; */
 	font-family : Daum;	
 	margin : 0;	

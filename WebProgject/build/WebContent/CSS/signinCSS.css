@@ -38,10 +38,11 @@ progress { -webkit-appearance: none; }
 #loginform input[type=text]:focus,input[type=email]:focus,input[type=password]:focus {
    background-color:#AAAAAA;
 }
-
+#loginform input[type=submit]{
+	width: 15em;
+}
 #loginform input[type=button],input[type=submit]  {	
-	position:relative;
-	left:20%;
+	position:relative;		
     background-color: #4CAF50;
     color: white;
     padding: 8px 10px;
@@ -50,7 +51,9 @@ progress { -webkit-appearance: none; }
     border-radius: 4px;
     cursor: pointer;
 }
-
+#user_submit{
+	width: 15em;
+}
 #loginform input[type=button]:hover,input[type=button]:hover {
     background-color: #45a049;
 }
@@ -59,8 +62,4 @@ progress { -webkit-appearance: none; }
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-}
-
-body{
-	
 }
