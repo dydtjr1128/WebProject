@@ -6,7 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="shortcut icon" href="images/pabicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" type="text/css" href="CSS/indexCSS.css?ver=2">
-
+<%-- <%
+String name = "ff";
+%>
+<script>
+<%="var name = '"+name+"';"%>
+alert('<%=name%>'); --%>
+</script>
 </head>
 <body>
    <div id="cky_wrap">

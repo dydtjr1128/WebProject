@@ -35,6 +35,9 @@ progress { -webkit-appearance: none; }
     border-radius: 4px;
     box-sizing: border-box;
 }
+#signIn{
+	width : 20em;
+}
 #loginform input[type=text]:focus,input[type=email]:focus,input[type=password]:focus {
    background-color:#AAAAAA;
 }

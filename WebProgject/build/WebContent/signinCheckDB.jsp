@@ -29,12 +29,12 @@
 		ResultSet rs = pstmt.executeQuery();
 		if(rs.next() == false){
 			System.out.println("사용o");
-			out.println("사용 가능한 ID입니다.");			
+			out.println("1");			
 			request.getSession().removeAttribute("ID");
 			request.getSession().setAttribute("ID",userID);
 		}
 		else{			
-			out.println("존재하는 ID입니다.");
+			out.println("2");
 			System.out.println("사용x");
 		}
 		System.out.println(rs.toString());
@@ -44,11 +44,11 @@
 			System.out.println(s);
 			if(rs.getString("userID").equals(userID)){
 				session.setAttribute("ID",userID);
-				out.println("존재하는 ID");			
+				out.println("2");			
 			}
 			else{
 				System.out.println("사용o");
-				out.println("사용 가능한 ID입니다.");			
+				out.println("1");			
 					
 			}
 		}	

@@ -5,7 +5,7 @@
 <head>
 <include file="QueryHeader.jsp">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="CSS/signinCSS.css?ver=2">
+<link rel="stylesheet" type="text/css" href="CSS/signinCSS.css?ver=1">
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <%@ include file="check.jsp" %>
 <script>
@@ -13,15 +13,25 @@
 $(function(){
 	
 	var out;
-	$("#signIn").click(function(){
+	$("#user_id").keyup(function(){
 		
 		var data_param ="input_id="+$("#user_id").val();		
 		$.ajax({
 			type : "post",
 			url : "signinCheckDB.jsp",			
 			data : data_param,
-			success : function(result){				
-					alert(result.trim());
+			success : function(result){	
+				var t = result.trim();
+				var div = document.getElementById("signIn");
+				if(t==1){					
+					 $("#signIn").html("사용 가능한 ID 입니다.");
+					 $("#signIn").css("color","blue");
+				}
+				else{
+					div.innerHTML="사용 중인 ID";
+					 $("#signIn").html("사용 중인 ID 입니다."); 
+					 $("#signIn").css("color","red");
+				}
 			}
 		});
 	});
@@ -87,6 +97,7 @@ $(function(){
 
 	}
 </script>
+<link rel="shortcut icon" href="images/pabicon.ico" type="image/x-icon" />
 </head>
 <body>
 <div id="con"></div>
@@ -106,7 +117,8 @@ $(function(){
 							
 							<td><input type="text" id="user_id" name="input_id"
 								placeholder="ID"></td><!-- ID넣는곳  -->
-							<td><input type="button" id="signIn" value="중복 확인"></td>
+								
+							<td><div id="signIn" name="login"></div></td>
 							
 							
 						</tr>

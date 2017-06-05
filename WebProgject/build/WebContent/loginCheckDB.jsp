@@ -25,30 +25,30 @@
 	System.out.println(userID + " " + userPW);
 	pstmt.setString(1, userID);
 	pstmt.setString(2, userPW);
-	ResultSet rs = pstmt.executeQuery();
-	
-	while(rs.next()){
+	ResultSet rs = pstmt.executeQuery();	
+	if(rs.next()){
 		String getID = rs.getString("userID");
 		String getPW = rs.getString("userPW");
 		if(getID == null){
 			System.out.println("로그인실패");
-			out.println("2");
-			break;
+			out.println("2");			
 		}
 		else if(getID.equals(userID)){
 			System.out.println("로그인성공");
 			out.println("1");/*  로그인성공  */
 			request.getSession().removeAttribute("loginID");
-			request.getSession().setAttribute("loginID",userID);
-			break;
+			request.getSession().setAttribute("loginID",userID);			
 		}
 		else{
 			System.out.println("로그인실패");
-			out.println("2");
-			break;
+			out.println("2");			
 		}
 	}
-	System.out.println("끝");
+	else{
+		System.out.println("로그인실패");
+		out.println("2");		
+	}	
+	System.out.println("2");
 	rs.close();
 	pstmt.close();
 	conn.close();

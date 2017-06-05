@@ -31,11 +31,11 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-#loginform input[type=text]:focus,input[type=password]:focus {
+#loginform input[type=text]:focus,input[type=password]:focus,input[type=button]:focus {
    background-color:#AAAAAA;
 }
 
-#loginform input[type=submit] {
+#loginform input[type=submit], input[type=button] {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -46,7 +46,7 @@
     cursor: pointer;
 }
 
-#loginform input[type=submit]:hover,input[type=password]:hover {
+#loginform input[type=submit]:hover,input[type=password]:hover, input[type=button]:hover {
     background-color: #45a049;
 }
 
