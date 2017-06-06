@@ -26,7 +26,7 @@
 	width : 100%;
 }
 progress { -webkit-appearance: none; }
-#loginform input[type=text],input[type=email],input[type=password], select {
+/* #loginform input[type=text],input[type=email],input[type=password], select {
     width: 15em;
     padding: 12px 20px;
     margin: 8px 0;
@@ -34,7 +34,7 @@ progress { -webkit-appearance: none; }
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
+} */
 #signIn{
 	width : 20em;
 }

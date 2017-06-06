@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center>
+<table></table>
+<script>
+	var list = ['A', 'B', 'C', 'D', 'E', 'F'', 'G', 'H', 'I', 'J'];
+	for(var i=0; i<list.length; i++){
+		document.write();
+	}
+</script>
 
 </body>
 </html>

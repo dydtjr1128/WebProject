@@ -50,8 +50,6 @@
          String jdbc_url = "jdbc:mysql://127.0.0.1/webuser";
          String user = "root";
          String password = "q1w2e3";
-         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-         Date date = new Date();
 
          try {
             // JDBC 드라이버 로드
@@ -61,12 +59,11 @@
             conn = DriverManager.getConnection(jdbc_url, user, password);
 
             // Connection 클래스의 인스턴스로 부터 SQL  문 작성을 위한 Statement 준비
-            String sql = "insert into board_table(id, title, content, date) values (?, ?, ?, ?)";
+            String sql = "insert into board_table(id, title, content) values (?, ?, ?)";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, (String)session.getAttribute("loginID"));
             pstmt.setString(2, request.getParameter("title"));
             pstmt.setString(3, request.getParameter("content"));
-            pstmt.setString(4, dateFormat.format(date));
             
             
             

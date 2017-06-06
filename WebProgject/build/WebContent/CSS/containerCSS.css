@@ -4,50 +4,19 @@
 
 #ad_block{   
    width : 100%; 
-   height : 450px;  
+   height : 455px;  
    background : url('../images/sub_background.png');   
 }
-
-#slider{
-
-}
-
-#slider_item{
-   position : relative;
-   width : 980px;
-   height : 450px;   
-}
-
 .common_set {
-    position: relative;
-    left: 20%;
+    margin : 0 auto;
     width: 980px; 
-    height :450px;
+    height :455px;
 }
-
-#slider_item>#lbtn{
-	position : absolute;
-	top : 40%;
-	left : 30px;
+#movie_selection{
+	margin-bottom : 50px;
 }
-
-#slider_item>#rbtn
-{
-	position : absolute; 
-	top : 40%; 
-	right : 30px;
-}
-
 .sub_title{
 	font-size : 1.5em;
 	color: #ffffff;
 }
 
-#movie_selection{
-	height : 350px;
-	margin-bottom : 150px;
-}
-
-#event{
-	height : 450px;
-}

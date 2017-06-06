@@ -18,8 +18,6 @@
    String jdbc_url = "jdbc:mysql://127.0.0.1/webuser";
    String user = "root";
    String password = "q1w2e3";
-   DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-   Date date = new Date();
 
    try {
       // JDBC 드라이버 로드
@@ -79,7 +77,8 @@
             String numberVal = rs.getString(1);
             String nameVal = rs.getString(2);
             String titleVal = rs.getString(3);
-            String dateVal = rs.getString(5);
+            String dateVal = rs.getString("date");
+            System.out.println(dateVal);
          %>
             <tr>
                <td><%=numberVal %></td>
