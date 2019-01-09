@@ -1,6 +1,6 @@
 # WebProject
-Web Project like CGV(Movie Theater),Reservation service
-JSP를 이용한 영화예매  사이트
+* Web Project like CGV(Movie Theater),Reservation service
+* JSP를 이용한 영화예매  사이트
 
 ![image](https://user-images.githubusercontent.com/19161231/47648840-9bdcad00-dbbe-11e8-9b80-f294dd3fe185.png)
 ![noname01](https://user-images.githubusercontent.com/19161231/47649051-54a2ec00-dbbf-11e8-8bdb-9f4336e24fa7.png)
